@@ -14,7 +14,7 @@ git clone git@github.com:vinayak700/Kukufm-Assignment.git
 ```
 ### Navigate to Project directory
 ```bash
-cd ./Kukufm-Assgnment
+cd ./Kukufm-Assignment
 ```
 
 ### Run the Development Server
