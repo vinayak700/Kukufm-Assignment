@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Header.module.css";
 import OffCanvas from "./OffCanvas";
+import Image from "next/image";
 
 const Header = () => {
   const [offCanvasOpen, setoffCanvasOpen] = useState(false);
@@ -90,10 +91,12 @@ const Header = () => {
           <button className={styles.navButton}>Buy Premium</button>
           <button className={styles.navButton}>Login/Signup</button>
           <button className={styles.navButton}>
-            <img
+            <Image
               src="https://d1l07mcd18xic4.cloudfront.net/static/donwloadapp.png"
               alt="Download"
               className={styles.downloadIcon}
+              width={20}
+              height={20}
             />
           </button>
         </div>
