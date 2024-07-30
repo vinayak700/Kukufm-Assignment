@@ -1,12 +1,9 @@
 "use client";
 
 import styles from "./page.module.css";
-import Header from "../components/Header";
-import LoadMore from "@/components/LoadMore";
-import Carousel from "@/components/Carousel";
 import { useEffect, useState } from "react";
 import { fetchData } from "./actions";
-import Footer from "@/components/Footer";
+import { Carousel, Header, LoadMore, Footer } from "@/components";
 
 export default function Home() {
   const [slides, setSlides] = useState([]);

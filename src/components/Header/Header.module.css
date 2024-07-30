@@ -35,7 +35,6 @@
 
 .logo {
     height: 40px;
-    /* Adjust as needed */
 }
 
 .middle {
@@ -102,7 +101,6 @@
     background: #555;
 }
 
-/* Dropdown styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -172,25 +170,12 @@
 }
 
 @media (max-width: 768px) {
-    .dropdownMenu {
-        width: 100%;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
+    .hamburger {
+        display: block;
     }
 
-    .searchBar {
-        width: 100%;
-        margin-top: 10px;
-    }
-
+    .middle,
     .right {
         display: none;
-        /* Hide right side buttons on small screens */
     }
 }

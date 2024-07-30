@@ -1,19 +1,40 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "../styles/Carousel.module.css";
-import Card from "./Card";
+import styles from "./Carousel.module.css";
+import Card from "../Card/Card";
 
 const Carousel = ({ slide }) => {
+  const [slidesToShow, setSlidesToShow] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth <= 768) {
+        setSlidesToShow(2);
+      } else if (window.innerWidth <= 1250) {
+        setSlidesToShow(3);
+      } else {
+        setSlidesToShow(4);
+      }
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow,
+    slidesToScroll: slidesToShow,
     autoplay: true,
     autoplaySpeed: 5000,
   };

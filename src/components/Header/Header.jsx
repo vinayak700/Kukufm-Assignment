@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "../styles/Header.module.css";
-import OffCanvas from "./OffCanvas";
+import styles from "./Header.module.css";
 import Image from "next/image";
+import { OffCanvas } from "..";
 
 const Header = () => {
   const [offCanvasOpen, setoffCanvasOpen] = useState(false);
